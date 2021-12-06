@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Login and User Test</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>Login and User Test</h1>
+<p>
+  Test duration: 54.839s
+</p>
+
+
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">com.orangehrmlive.demo.testsuite.LoginTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  VerifyThatTheLogoDisplayOnHomePage
+      </td>
+  <td class="duration">
+    0.742s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Verifying the logo : [[ChromeDriver: chrome on WINDOWS (587449c370e531e1de0039b8ebfddee7)] -&gt; xpath: //img[@alt=&apos;OrangeHRM&apos;]]&lt;br&gt;<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  VerifyUserShouldLogOutSuccessFully
+      </td>
+  <td class="duration">
+    2.129s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Clicking on User Profile Logo : [[ChromeDriver: chrome on WINDOWS (397036dc2152e0899744c4e70824bd53)] -&gt; xpath: //a[@id=&apos;welcome&apos;]]&lt;br&gt;<br />
+                                Mouse Hover on Logout : [[ChromeDriver: chrome on WINDOWS (397036dc2152e0899744c4e70824bd53)] -&gt; xpath: //a[normalize-space()=&apos;Logout&apos;]]&lt;br&gt;<br />
+                                Verifying the login panel text : [[ChromeDriver: chrome on WINDOWS (397036dc2152e0899744c4e70824bd53)] -&gt; xpath: //div[@id=&apos;logInPanelHeading&apos;]]&lt;br&gt;<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  verifyUserShouldLoginSuccessFully
+      </td>
+  <td class="duration">
+    0.045s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Verifying the message : [[ChromeDriver: chrome on WINDOWS (783c1c7624d5b9ac13130d93853ce54b)] -&gt; xpath: //a[@id=&apos;welcome&apos;]]&lt;br&gt;<br />
+                  </div>
+    
+
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">com.orangehrmlive.demo.testsuite.UsersTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  adminShouldAddUserSuccessfully
+      </td>
+  <td class="duration">
+    3.015s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Click on Admin Tab From Homepage : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //b[normalize-space()=&apos;Admin&apos;]]&lt;br&gt;<br />
+                                Verifying the system users text : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; css selector: div[class=&apos;head&apos;] h1]&lt;br&gt;<br />
+                                Click on the Add Button : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //input[@id=&apos;btnAdd&apos;]]&lt;br&gt;<br />
+                                Verify the add user text : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //h1[@id=&apos;UserHeading&apos;]]&lt;br&gt;<br />
+                                Select role : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //select[@id=&apos;systemUser_userType&apos;]]&lt;br&gt;<br />
+                                Enter Employee Name : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //input[@id=&apos;systemUser_employeeName_empName&apos;]]&lt;br&gt;<br />
+                                Enter Employee User Name : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //input[@id=&apos;systemUser_userName&apos;]]&lt;br&gt;<br />
+                                Select Status : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; name: systemUser[status]]&lt;br&gt;<br />
+                                Enter password[[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //input[@id=&apos;systemUser_password&apos;]]&lt;br&gt;<br />
+                                Enter confirmation password[[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //input[@id=&apos;systemUser_confirmPassword&apos;]]&lt;br&gt;<br />
+                                Click on the save Button : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: //input[@id=&apos;btnSave&apos;]]&lt;br&gt;<br />
+                                Verify the add user text : [[ChromeDriver: chrome on WINDOWS (0c7cdcb7cf4253107d1807fc0145dc93)] -&gt; xpath: (//div[@id=&apos;successBodyEdit&apos;])[1]]&lt;br&gt;<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchTheDeletedUserAndVerifyTheMessageNoRecordFound
+      </td>
+  <td class="duration">
+    2.348s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Click on Admin Tab From Homepage : [[ChromeDriver: chrome on WINDOWS (01f512e8e5facbae3aebfee89b55f845)] -&gt; xpath: //b[normalize-space()=&apos;Admin&apos;]]&lt;br&gt;<br />
+                                Verifying the system users text : [[ChromeDriver: chrome on WINDOWS (01f512e8e5facbae3aebfee89b55f845)] -&gt; css selector: div[class=&apos;head&apos;] h1]&lt;br&gt;<br />
+                                Enter Employee User Name : [[ChromeDriver: chrome on WINDOWS (01f512e8e5facbae3aebfee89b55f845)] -&gt; xpath: (//input[@id=&apos;searchSystemUser_userName&apos;])[1]]&lt;br&gt;<br />
+                                Select role : [[ChromeDriver: chrome on WINDOWS (01f512e8e5facbae3aebfee89b55f845)] -&gt; xpath: //select[@id=&apos;searchSystemUser_userType&apos;]]&lt;br&gt;<br />
+                                Select Status : [[ChromeDriver: chrome on WINDOWS (01f512e8e5facbae3aebfee89b55f845)] -&gt; name: searchSystemUser[status]]&lt;br&gt;<br />
+                                Click on the search Button : [[ChromeDriver: chrome on WINDOWS (01f512e8e5facbae3aebfee89b55f845)] -&gt; xpath: //input[@id=&apos;searchBtn&apos;]]&lt;br&gt;<br />
+                                Verify the add user text : [[ChromeDriver: chrome on WINDOWS (01f512e8e5facbae3aebfee89b55f845)] -&gt; xpath: //td[contains(text(),&apos;No Records Found&apos;)]]&lt;br&gt;<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  searchTheUserCreatedAndVerifyIt
+      </td>
+  <td class="duration">
+    1.764s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Click on Admin Tab From Homepage : [[ChromeDriver: chrome on WINDOWS (8077ef8871e382036b2967a976056dd8)] -&gt; xpath: //b[normalize-space()=&apos;Admin&apos;]]&lt;br&gt;<br />
+                                Verifying the system users text : [[ChromeDriver: chrome on WINDOWS (8077ef8871e382036b2967a976056dd8)] -&gt; css selector: div[class=&apos;head&apos;] h1]&lt;br&gt;<br />
+                                Enter Employee User Name : [[ChromeDriver: chrome on WINDOWS (8077ef8871e382036b2967a976056dd8)] -&gt; xpath: (//input[@id=&apos;searchSystemUser_userName&apos;])[1]]&lt;br&gt;<br />
+                                Select role : [[ChromeDriver: chrome on WINDOWS (8077ef8871e382036b2967a976056dd8)] -&gt; xpath: //select[@id=&apos;searchSystemUser_userType&apos;]]&lt;br&gt;<br />
+                                Select Status : [[ChromeDriver: chrome on WINDOWS (8077ef8871e382036b2967a976056dd8)] -&gt; name: searchSystemUser[status]]&lt;br&gt;<br />
+                                Click on the search Button : [[ChromeDriver: chrome on WINDOWS (8077ef8871e382036b2967a976056dd8)] -&gt; xpath: //input[@id=&apos;searchBtn&apos;]]&lt;br&gt;<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  verifyThatAdminShouldDeleteTheUserSuccessFully
+      </td>
+  <td class="duration">
+    1.822s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        Click on Admin Tab From Homepage : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; xpath: //b[normalize-space()=&apos;Admin&apos;]]&lt;br&gt;<br />
+                                Verifying the system users text : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; css selector: div[class=&apos;head&apos;] h1]&lt;br&gt;<br />
+                                Enter Employee User Name : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; xpath: (//input[@id=&apos;searchSystemUser_userName&apos;])[1]]&lt;br&gt;<br />
+                                Select role : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; xpath: //select[@id=&apos;searchSystemUser_userType&apos;]]&lt;br&gt;<br />
+                                Select Status : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; name: searchSystemUser[status]]&lt;br&gt;<br />
+                                Click on the search Button : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; xpath: //input[@id=&apos;searchBtn&apos;]]&lt;br&gt;<br />
+                                Click on the checkbox : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; xpath: //input[@id=&apos;ohrmList_chkSelectAll&apos;]]&lt;br&gt;<br />
+                                Click on the delete button : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; xpath: //input[@id=&apos;btnDelete&apos;]]&lt;br&gt;<br />
+                                Verify the add user text : [[ChromeDriver: chrome on WINDOWS (ead85c7798ff38d2d23c3e2be8ed4182)] -&gt; xpath: //td[contains(text(),&apos;No Records Found&apos;)]]&lt;br&gt;<br />
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>
