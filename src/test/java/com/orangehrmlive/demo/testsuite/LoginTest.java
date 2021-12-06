@@ -3,53 +3,47 @@ package com.orangehrmlive.demo.testsuite;
 import com.orangehrmlive.demo.pages.*;
 import com.orangehrmlive.demo.testbase.TestBase;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase {
 
     HomePage homePage;
     LoginPage loginPage;
-    AddUserPage addUserPage;
-    AdminPage adminPage;
-    DashboardPage dashboardPage;
-    ViewSystemUsersPage viewSystemUsersPage;
 
-    @BeforeMethod
+    @BeforeMethod//(groups = {"smoke","sanity","regression"})
     public void inIt(){
         homePage = new HomePage();
         loginPage = new LoginPage();
-        addUserPage = new AddUserPage();
-        adminPage = new AdminPage();
-        dashboardPage = new DashboardPage();
-        viewSystemUsersPage = new ViewSystemUsersPage();
+
     }
 
-    @BeforeMethod
-    public void loginSuccessfully(){
+    @BeforeMethod//(groups = {"smoke","sanity","regression"})
+    @Parameters({"username", "password"})
+    public void loginSuccessfully(String uname, String pword){
         //Enter username
-        loginPage.enterTheUsernameInTheUsernameField("Admin");
+        loginPage.enterTheUsernameInTheUsernameField(uname);
         //Enter password
-        loginPage.enterThePasswordInThePasswordField("admin123");
+        loginPage.enterThePasswordInThePasswordField(pword);
         //Click on Login Button
         loginPage.clickOnTheLoginButton();
     }
 
-    @Test(groups = {"smoke"})
+
+    @Test//(groups = {"smoke", "regression"})
     public void verifyUserShouldLoginSuccessFully(){
         homePage.verifyTheWelcomeMessage();
     }
 
-    @Test(groups = {"smoke", "sanity"} )
-    public void VerifyThatTheLogoDisplayOnHomePage(){
+    @Test(groups = {"sanity", "regression"} )
+    public void verifyThatTheLogoDisplayOnHomePage(){
         homePage.verifyTheOrangeHRMLogo();
     }
 
-    @Test(groups = {"smoke", "sanity", "regression"})
-    public void VerifyUserShouldLogOutSuccessFully() {
-        homePage.clickOnTheUserProfileLogo();
-        homePage.mouseHoverOnLogoutAndClick();
-        loginPage.verifyTheLoginPanelText();
+    @Test(groups = {"regression"})
+    public void verifyUserShouldLogOutSuccessFully() {
+        //loginPage.clickOnTheLogOutButton();
+        //loginPage.verifyTheLoginPanelText();
     }
 
 

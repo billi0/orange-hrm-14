@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testsuite" verbose="1" >
+    <test name="Regression test" >
+    <parameter name="username" value="Admin"></parameter>
+    <parameter name="password" value="admin123"></parameter>
+    <parameter name="urole" value="Admin"></parameter>
+    <parameter name="ufullname" value="Ananya Dash"></parameter>
+    <parameter name="uusername" value="AnanyaDash20"></parameter>
+    <parameter name="ustatus" value="Disabled"></parameter>
+    <parameter name="upassword" value="adfad1214"></parameter>
+    <parameter name="uconfirmPassword" value="adfad1214"></parameter>    
+    <groups>
+        <run>
+            <include name="regression"/>
+        </run>
+    </groups>
+       <classes>
+           <class name="com.orangehrmlive.demo.testsuite.UsersTest"></class>
+       </classes>
+    </test>
+</suite>

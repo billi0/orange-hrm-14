@@ -8,13 +8,13 @@ import org.testng.annotations.BeforeMethod;
 public class TestBase extends Utility {
     String browser = PropertyReader.getInstance().getProperty("browser");
 
-    @BeforeMethod
+    @BeforeMethod(groups = {"smoke","sanity","regression"})
     public void setUp(){
         selectBrowser(browser);
     }
 
-    @AfterMethod
+    @AfterMethod(groups = {"smoke","sanity","regression"})
     public void tearDown(){
-        closeBrowser();
+       closeBrowser();
     }
 }

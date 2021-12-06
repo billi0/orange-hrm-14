@@ -81,7 +81,7 @@ public class ViewSystemUsersPage extends Utility {
     }
 
     public void clickOnOKButtonOfPopUp(){
-        driver.switchTo().alert().accept();
+        driver.switchTo().alert().dismiss();
 
     }
 
