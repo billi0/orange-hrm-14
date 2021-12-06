@@ -4,6 +4,7 @@ import com.orangehrmlive.demo.pages.*;
 import com.orangehrmlive.demo.testbase.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginTest extends TestBase {
@@ -26,30 +27,30 @@ public class LoginTest extends TestBase {
     }
 
     @BeforeMethod
-    public void loginSuccessfully(){
+    @Parameters({"username", "password"})
+    public void loginSuccessfully(String uname, String pword){
         //Enter username
-        loginPage.enterTheUsernameInTheUsernameField("Admin");
+        loginPage.enterTheUsernameInTheUsernameField(uname);
         //Enter password
-        loginPage.enterThePasswordInThePasswordField("admin123");
+        loginPage.enterThePasswordInThePasswordField(pword);
         //Click on Login Button
         loginPage.clickOnTheLoginButton();
     }
 
-    @Test(groups = {"smoke"})
+    @Test(priority = 1, groups = {"smoke", "regression"})
     public void verifyUserShouldLoginSuccessFully(){
         homePage.verifyTheWelcomeMessage();
     }
 
-    @Test(groups = {"smoke", "sanity"} )
+    @Test(groups = {"sanity", "regression"} )
     public void VerifyThatTheLogoDisplayOnHomePage(){
         homePage.verifyTheOrangeHRMLogo();
     }
 
-    @Test(groups = {"smoke", "sanity", "regression"})
+    @Test(priority = 2, groups = {"regression"})
     public void VerifyUserShouldLogOutSuccessFully() {
-        homePage.clickOnTheUserProfileLogo();
-        homePage.mouseHoverOnLogoutAndClick();
-        loginPage.verifyTheLoginPanelText();
+        //loginPage.clickOnTheLogOutButton();
+        //loginPage.verifyTheLoginPanelText();
     }
 
 

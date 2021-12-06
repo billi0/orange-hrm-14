@@ -17,8 +17,11 @@ public class LoginPage extends Utility {
     @FindBy (xpath = "//input[@id='btnLogin']")
     WebElement loginButton;
 
-    @FindBy (xpath = "//div[@id='logInPanelHeading']")
+    @FindBy (id = "logInPanelHeading")
     WebElement loginPanelText;
+
+    @FindBy(xpath = "//a[text()='Logout']")
+    WebElement clickOnLogout;
 
     public LoginPage() {
         PageFactory.initElements(driver, this);
@@ -37,6 +40,11 @@ public class LoginPage extends Utility {
     public void clickOnTheLoginButton(){
         Reporter.log("clicking on the login button : " + loginButton.toString() + "<br>");
         pmClickOnElement(loginButton);
+    }
+
+    public void clickOnTheLogOutButton(){
+        Reporter.log("clicking on the logout button : " + clickOnLogout.toString() + "<br>");
+        pmClickOnElement(clickOnLogout);
     }
 
     public void verifyTheLoginPanelText(){

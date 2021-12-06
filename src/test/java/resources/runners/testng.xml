@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testsuite" verbose="1" >
+    <listeners>
+        <listener class-name="com.orangehrmlive.demo.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="LoginTests" >
+        <parameter name="username" value="Admin"></parameter>
+        <parameter name="password" value="admin123"></parameter>
+        <parameter name="urole" value="Admin"></parameter>
+        <parameter name="ufullname" value="Ananya Dash"></parameter>
+        <parameter name="uusername" value="AnanyaDash20"></parameter>
+        <parameter name="ustatus" value="Disabled"></parameter><parameter name="username" value="Admin"></parameter>
+        <parameter name="password" value="admin123"></parameter>
+        <parameter name="urole" value="Admin"></parameter>
+        <parameter name="ufullname" value="Ananya Dash"></parameter>
+        <parameter name="uusername" value="AnanyaDash20"></parameter>
+        <parameter name="ustatus" value="Disabled"></parameter>
+        <parameter name="upassword" value="adfad1214"></parameter>
+        <parameter name="uconfirmPassword" value="adfad1214"></parameter>
+        <parameter name="upassword" value="adfad1214"></parameter>
+        <parameter name="uconfirmPassword" value="adfad1214"></parameter>
+        <classes>
+            <class name="com.orangehrmlive.demo.testsuite.LoginTest"></class>
+            <class name="com.orangehrmlive.demo.testsuite.UsersTest"></class>
+        </classes>
+    </test>
+</suite>
